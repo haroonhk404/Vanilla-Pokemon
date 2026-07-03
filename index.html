@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex — jQuery edition</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    
-    <h1> HELLO AORLD </h1>
+  <header class="topbar">
+    <h1 class="topbar__title">Pokédex</h1>
+    <p class="topbar__subtitle">Built with HTML, CSS &amp; jQuery</p>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <input
+        type="search"
+        id="search"
+        class="search"
+        placeholder="Search the loaded Pokémon…"
+        autocomplete="off"
+      />
+      <span id="count" class="count">0 shown</span>
+    </div>
+
+    <!-- jQuery will inject cards in here -->
+    <section id="grid" class="grid" aria-live="polite"></section>
+
+    <div id="status" class="status"></div>
+
+    <div class="center">
+      <button id="load-more" class="btn">Load more</button>
+    </div>
+  </main>
+
+  <!-- jQuery from a CDN, then our code -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/list.js"></script>
 </body>
 </html>
